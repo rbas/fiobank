@@ -23,7 +23,7 @@ except ImportError:
 base_path = os.path.dirname(__file__)
 
 
-version = '0.0.5'
+version = '0.0.6'
 
 
 # release a version, publish to GitHub and PyPI
@@ -51,8 +51,7 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: ISC License (ISCL)',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.2',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Internet',
     )

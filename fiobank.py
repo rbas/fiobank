@@ -19,7 +19,7 @@ def coerce_date(value):
 
 
 def sanitize_value(value, convert=None):
-    if isinstance(value, basestring):
+    if isinstance(value, str):
         value = value.strip() or None
     if convert and value:
         return convert(value)
@@ -40,23 +40,23 @@ class FioBank(object):
 
     transaction_schema = {
         u'ID pohybu': ('transaction_id', str),
-        u'Datum': ('date', unicode),
+        u'Datum': ('date', str),
         u'Objem': ('amount', float),
         u'Měna': ('currency', str),
         u'Protiúčet': ('account_number', str),
-        u'Název protiúčtu': ('account_name', unicode),
+        u'Název protiúčtu': ('account_name', str),
         u'Kód banky': ('bank_code', str),
         u'BIC': ('bic', str),
-        u'Název banky': ('bank_name', unicode),
+        u'Název banky': ('bank_name', str),
         u'KS': ('constant_symbol', str),
         u'VS': ('variable_symbol', str),
         u'SS': ('specific_symbol', str),
-        u'Uživatelská identifikace': ('user_identification', unicode),
-        u'Zpráva pro příjemce': ('recipient_message', unicode),
-        u'Typ': ('type', unicode),
-        u'Provedl': ('executor', unicode),
-        u'Upřesnění': ('specification', unicode),
-        u'Komentář': ('comment', unicode),
+        u'Uživatelská identifikace': ('user_identification', str),
+        u'Zpráva pro příjemce': ('recipient_message', str),
+        u'Typ': ('type', str),
+        u'Provedl': ('executor', str),
+        u'Upřesnění': ('specification', str),
+        u'Komentář': ('comment', str),
         u'ID pokynu': ('instruction_id', str),
     }
 
